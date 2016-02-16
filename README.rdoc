@@ -2,7 +2,8 @@
 
 Coder Manual project application
 Subscription-based web application 
-http://codermanual.com
+
+To https://git.heroku.com/dry-island-23018.git
 
 Things you may want to cover:
 
