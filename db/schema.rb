@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160223205549) do
   create_table "contacts", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.text     "commments"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
