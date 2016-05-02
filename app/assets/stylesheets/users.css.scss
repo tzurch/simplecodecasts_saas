@@ -1,0 +1,27 @@
+.job_title_icon{
+  display: inline-block;  
+  width: 30px;
+  height: 30px;
+  border: 2px solid orange;
+  border-radius: 4px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+
+}
+
+.well.profile-block{
+  border-radius: 4px;
+  background-color: light-grey;
+  color: black;
+  border: 2px solid orange;
+  h3 {
+    margin-top: 0;  
+  }
+
+}
+
+.avatar{
+  border-radius: 50%;
+    
+}
