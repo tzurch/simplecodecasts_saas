@@ -1,3 +1,10 @@
+/* Users show page */
+.user-show-avater{
+  height: 128px;
+  width: 128px;
+
+}
+
 .job_title_icon{
   display: inline-block;  
   width: 30px;
@@ -21,7 +28,11 @@
 
 }
 
-.avatar{
+/* Users profile pics rounded */
+.user-profile-pic {
   border-radius: 50%;
-    
+}
+
+.well.white-bg {
+  background-color: white;
 }
