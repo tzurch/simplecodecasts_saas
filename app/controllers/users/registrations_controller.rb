@@ -4,16 +4,15 @@ class Users::RegistrationsController < Devise:: RegistrationsController
     
   def create
     super do |resource|  
-    if params[:plan]
-          resource.plan_id = params[:plan]
-        if resource.plan_id == '2'
-           resource.save_with_payment
-        else
-          resource.save
-        end 
+      if params[:plan]
+        resource.plan_id = params[:plan]
+        resource.stripe_card_token = params["stripeToken"]
+        resource.save_with_payment
+        resource.save
+      end
     end
-   end 
-  end 
+  end
+  
  
   private
     def select_plan
@@ -22,6 +21,6 @@ class Users::RegistrationsController < Devise:: RegistrationsController
         redirect_to root_url
       end  
     end
-  
+
 end
 

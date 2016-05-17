@@ -22,7 +22,19 @@
     </div>
     
     <div class="actions form-group">
-      <%= f.submit "Sign up", class: 'btn btn-success' %>
+      <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_U8RBECpsuPqT0H81y2M3I4VL"
+    data-amount="0"
+    data-name="FYi StartUp"
+    data-description="Basic Plan"
+    data-image="/assets/images/appstorelogoicon.png"
+    data-locale="auto"
+    data-currency="cad">
+  </script>
+      
     </div>
+    
+    
 <% end %>
       
