@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     customer.plan = params[:plan_id]
     customer.save
     current_user.update(plan_id: params[:plan_id])
+    flash[:success] = "Succesfull update to your account"
     redirect_to :back
   end
 end 

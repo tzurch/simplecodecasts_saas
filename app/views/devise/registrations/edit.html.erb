@@ -34,7 +34,10 @@
       </div>
     <% end %>
     
-    <h3>Cancel my account</h3>
+    <h3>Downgrade Account</h3>
+    <%= link_to "Downgrade to basic", upgrade_users_path(plan_id: 1) %><br />
+    
+    <h3>Cancel My Account</h3>
     
     <p>Sorry to see you go. <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
     
