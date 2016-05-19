@@ -20,8 +20,8 @@
       
       <% if current_user.plan_id == 1 %>
       <div class="well profile-block contact-info">
-         <p>Want to see more information? Get the most from your account today. Become a Pro user and build upon your reputation.</p> 
-       <%= link_to "upgrade Pro", upgrade_users_path(plan_id: 2), class: 'btn btn-primary' %>
+         <p>Whant to see more information? Get the most from your account today. Become a Pro user and build upon your reputation.</p> 
+       <%= link_to "upgrade Pro", upgrade_users_path(plan_id: 2), data: { confirm: "Congratulations on becomeing PRO! Your credit card on file will be charged. Thank you!" },  class: 'btn btn-primary' %>
       <% end %>
     </div>
 </div>

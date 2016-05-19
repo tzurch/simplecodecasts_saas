@@ -30,16 +30,25 @@
       </div>
     
       <div class="actions form-group">
-        <%= f.submit "Update", class: 'btn btn-primary' %>
+        <%= f.submit "Update", class: 'btn btn-warning' %>
       </div>
     <% end %>
     
+    <% if current_user.plan_id == 1 %>
+     
+    <div class="well profile-block contact-info">
+        <h3>Upgrade Account</h3>
+        <p>Want to see more information? Get the most from your account today. Become a Pro user and build upon your reputation.</p> 
+       <%= link_to "Upgrade Pro", upgrade_users_path(plan_id: 2), data: { confirm: "Congratulations on becomeing PRO! Your credit card on file will be charged. Thank you!" }, class: 'btn btn-success' %>
+    </div>   
+    <% end %> 
+    
     <h3>Downgrade Account</h3>
-    <%= link_to "Downgrade to basic", upgrade_users_path(plan_id: 1) %><br />
+    <%= link_to "Downgrade Basic", upgrade_users_path(plan_id: 1), data: { confirm: "Are you sure? You will be downgraded to basic and will not be able to communicate to members" }, class: 'btn btn-primary' %><br />
     
     <h3>Cancel My Account</h3>
     
-    <p>Sorry to see you go. <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+    <p>Sorry to see you go. <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure? Your account will no longer exist." }, method: :delete, class: 'btn btn-danger' %></p>
     
     <%= link_to "Back", :back %>
   </div>
