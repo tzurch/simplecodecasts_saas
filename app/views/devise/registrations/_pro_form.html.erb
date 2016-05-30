@@ -20,20 +20,27 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
     </div>
-<!--c/c contact form --> 
+<!--coupon  -->
+  
+  <p>
+    <label class="amount">
+      <span>Amount: $10.00</span>
+    </label>
+  </p>
+  <p>
+    <%= label_tag(:couponCode, 'Coupon:') %>
+    <%= text_field_tag(:couponCode) %>
+  </p>
 
 
+<!--coupon  --> 
   <!--Strip code -->
 <!-- form action="" method="POST"> -->
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_U8RBECpsuPqT0H81y2M3I4VL"
-    data-amount="1000"
-    data-name="FYi StartUp"
-    data-description="Pro Plan"
-    data-image="/assets/images/appstorelogoicon.png"
-    data-locale="auto"
-    data-currency="cad">
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_U8RBECpsuPqT0H81y2M3I4VL"
+          data-description="Your Purchase"
+          data-locale="auto">
+    
   </script>
   <!-- </form> -->
   

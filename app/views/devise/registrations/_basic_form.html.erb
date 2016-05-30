@@ -1,3 +1,4 @@
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'basic_form'}) do |f| %>
     <%= devise_error_messages! %>
     
@@ -7,7 +8,10 @@
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, class: 'form-control' %>
     </div>
+    <!-- Firebase starts here -->
     
+   
+    <!-- CC Header Starts -->
     <div class="field form-group">
       <%= f.label :password %>
       <% if @validatable %>
@@ -19,8 +23,9 @@
     <div class="field form-group">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
-    </div>
-    
+    </div> 
+
+ 
     <div class="actions form-group">
       <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"

@@ -17,4 +17,5 @@ class UsersController < ApplicationController
     flash[:success] = "Succesfull update to your account"
     redirect_to :back
   end
+  
 end 
