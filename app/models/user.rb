@@ -7,13 +7,13 @@ class User < ActiveRecord::Base
   has_one :profile
   attr_accessor :stripe_card_token
   
-  def save_with_payment
+  def save_with_payment coupon
     #if valid?
-      customer = Stripe::Customer.create(email: email, 
-        plan: plan_id, 
-        source: stripe_card_token
-      )
+      data = {email: email, plan: plan_id, source: stripe_card_token}
+      data.merge!(coupon: coupon) if coupon.present?
+      customer = Stripe::Customer.create(data)
       self.stripe_customer_token = customer.id
+      self.coupon = coupon
       save!
       logger.info "customer created"
     #send

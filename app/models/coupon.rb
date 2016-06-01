@@ -1,6 +1,6 @@
 class Coupon < ActiveRecord::Base
     
-    has_many :charges
+  has_many :charges
   validates_presence_of :code, :discount_percent
   validates_uniqueness_of :code
 

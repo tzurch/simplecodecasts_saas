@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527223620) do
+ActiveRecord::Schema.define(version: 20160530205418) do
 
   create_table "charges", force: true do |t|
     t.integer  "amount"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20160527223620) do
     t.datetime "updated_at"
     t.integer  "plan_id"
     t.string   "stripe_customer_token"
+    t.string   "coupon"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

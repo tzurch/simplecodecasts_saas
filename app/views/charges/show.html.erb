@@ -1,0 +1,30 @@
+<p>
+  <label class="subtotal">
+    <span>Subtotal: <%= number_to_currency(@amount ) %></span>
+  </label>
+</p>
+  
+ <% if @coupon %>
+  <p>
+    <label class="coupon">
+      <span>Coupon: <%= @coupon.code %></span>
+    </label>
+  </p>
+  <p>
+    <label class="savings">
+      <span>Savings: <%= number_to_currency(@discount_amount) %></span>
+    </label>
+  </p>
+  <p>
+    <label class="discount">
+      <span>Discount: <%= @coupon.discount_percent %>%</span>
+    </label>
+  </p>
+  <% end %>
+
+<p>
+  <label class="total">
+    <span>Total: <%= number_to_currency(@charged_amount) %></span>
+  </label>
+</p>
+
